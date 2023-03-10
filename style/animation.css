@@ -1,0 +1,88 @@
+@keyframes rotateText {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+footer .icon svg:hover .grave {
+  animation: anim-grave 1000ms;
+}
+@keyframes anim-grave {
+  0% {
+    transform: scale(1) translate(5px, -5px);
+  }
+  20% {
+    transform: scale(0.8) translate(8px, -5px);
+  }
+  50% {
+    transform: scale(1.4) translate(2px, -15px);
+  }
+  100% {
+    transform: scale(1) translate(5px, -5px);
+  }
+}
+@media (max-width: 834px) {
+  footer {
+    padding: 0 0px 40px 0px;
+  }
+}
+@keyframes anim-text {
+  0% {
+    transform: skew(0, 10deg) rotate(10deg) translate(200px, 1400px);
+    opacity: 0;
+  }
+  60% {
+    transform: skew(0, 10deg) rotate(10deg) translate(200px, 1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(0, 0) rotate(0) translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes scale-background {
+  0% {
+    transform: scale(20) rotate(40deg);
+  }
+  20% {
+    transform: scale(20) rotate(40deg);
+  }
+  50% {
+    transform: scale(1) rotate(0);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes opacity-menu {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-plane {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(200px, -50px) rotate(-60deg);
+    opacity: 0;
+  }
+  80.1% {
+    transform: translate(-200px, -80px) rotate(60deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

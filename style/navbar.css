@@ -1,0 +1,151 @@
+nav {
+  padding: 60px 40px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  z-index: 0;
+  animation: opacity-menu 1200ms;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+nav .logo svg {
+  width: 100%;
+  margin-top: 3px;
+}
+nav .logo:hover:after {
+  opacity: 1;
+  transform: translateX(0);
+}
+nav .logo:after {
+  content: "Back home";
+  position: absolute;
+  font-family: "Averta", sans-serif;
+  color: #f3f2f4;
+  font-size: 16px;
+  align-self: center;
+  margin-left: 70px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: transform 400ms cubic-bezier(0, 0.45, 0.15, 1),
+    opacity 400ms cubic-bezier(0, 0.45, 0.15, 1);
+}
+nav .content-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+nav .content-nav .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .content-nav .menu svg {
+  margin-left: 14px;
+}
+nav .content-nav .menu a svg {
+  transition: transform 400ms cubic-bezier(0, 0.45, 0.15, 1);
+}
+nav .content-nav .menu a:hover svg {
+  transform: translateX(20px);
+}
+nav .content-nav .social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .content-nav .social a {
+  display: flex;
+  justify-content: center;
+  transform: scale(1);
+  height: 40px;
+  width: 40px;
+}
+nav .content-nav .social a:nth-child(2) {
+  margin: 0 20px;
+}
+nav .content-nav .social a:before {
+  content: "";
+  background-color: #eea1be;
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: 10;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 300ms, opacity 200ms;
+}
+nav .content-nav .social a:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+nav .content-nav .social a svg {
+  align-self: center;
+  z-index: 20;
+}
+@media (min-width: 834px) and (max-width: 1200px) {
+  nav .content-nav {
+    width: 50%;
+  }
+}
+@media (max-width: 834px) {
+  nav {
+    padding: 60px 30px;
+  }
+  nav .logo {
+    width: 30px;
+  }
+  nav .logo:hover:after {
+    display: none;
+  }
+  nav .content-nav {
+    width: 75%;
+    flex-direction: row-reverse;
+  }
+  nav .content-nav .menu svg {
+    display: none;
+  }
+  nav .content-nav .social a {
+    width: 30px;
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:before {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.8s ease;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 120%;
+  left: 5%;
+  margin-bottom: 5px;
+  margin-left: -100px;
+  padding: 10px 7px;
+  width: 200px;
+  height: auto;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  z-index: 999;
+  text-transform: none;
+  letter-spacing: 0;
+  font-style: italic;
+}
+
+[data-tooltip]:hover:before {
+  opacity: 1;
+  transition: all 0.8s ease;
+}
