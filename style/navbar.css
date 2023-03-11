@@ -24,7 +24,7 @@ nav .logo:after {
   content: "Back home";
   position: absolute;
   font-family: "Averta", sans-serif;
-  color: #f3f2f4;
+  color: #000;
   font-size: 16px;
   align-self: center;
   margin-left: 70px;

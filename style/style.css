@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap");
+@font-face {
+  font-family: "Vesterbro";
+  src: url(font/TRYVesterbro-Poster.woff2) format("woff2"), url(font/TRYVesterbro-Poster.woff2) format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 body {
-  background-color: #420fe7;
+  background-color: #ddd;
 }
 
 .content {
@@ -9,9 +16,38 @@ body {
   box-sizing: border-box;
 }
 
+.content-about .about-services .resume h3 {
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+.resume h3 svg {
+  margin-right: 14px;
+}
+
+.resume a {
+  background-color: #f2c744;
+  color: #000;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 200ms, border 200ms;
+}
+
+.resume a:hover {
+  background-color: #ffff00;
+  color: #000;
+  border: 1px solid #f2c744;
+}
+
 .content .intro {
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   padding: 0 40px 0 170px;
   box-sizing: border-box;
 }
@@ -24,7 +60,7 @@ body {
 
 .content .intro .tag svg {
   margin: 0 30px;
-  fill: #574cf2;
+  fill: #000;
 }
 
 .content .intro h1 {
@@ -51,7 +87,7 @@ body {
 
 .content .intro .anim .shape:before {
   content: "";
-  background-color: #18033c;
+  background-color: #f2c744;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 200px;
@@ -94,7 +130,7 @@ body {
 
 .content .intro .intro-content .text {
   animation: anim-text 1100ms cubic-bezier(0, 0.45, 0.15, 1);
-  color: #8c85f3;
+  color: #000;
   margin: 40px 0;
 }
 
@@ -187,17 +223,17 @@ body {
 }
 
 h1 {
-  font-family: "Jost", sans-serif;
-  color: #f3f2f4;
+  font-family: "Vesterbro", sans-serif;
+  color: #000;
   font-size: 7vw;
   line-height: 9vw;
 }
 
 h2 {
-  font-family: "Jost", sans-serif;
-  font-size: 4vw;
+  font-family: "Vesterbro", sans-serif;
+  font-size: 2vw;
   font-weight: 700;
-  line-height: 4.4vw;
+  line-height: 4vw;
   color: #000;
 }
 
@@ -241,10 +277,15 @@ h3 {
   font-family: "Jost", sans-serif;
 }
 
+.txtMark {
+  background-color: #ffff00;
+}
+
 p {
-  font-family: "Jost", sans-serif;
-  font-size: 18px;
-  line-height: 32px;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.65;
 }
 
 a {
@@ -274,8 +315,8 @@ button:hover {
 }
 
 .tag {
-  font-family: "Jost", sans-serif;
-  color: #eea1be;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  color: #000;
   font-size: 16px;
 }
 
@@ -284,7 +325,7 @@ section:nth-last-child(2) {
 }
 
 .contact {
-  border: 1px solid #574cf2;
+  border: 1px solid #000;
   display: flex;
   position: relative;
   align-items: center;
@@ -320,10 +361,10 @@ section:nth-last-child(2) {
 }
 
 .contact .mail {
-  font-family: "Jost", sans-serif;
-  color: #fff;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  color: #000;
   font-size: 1.4vw;
-  font-weight: 500;
+  font-weight: 600;
   transform: scale(1);
   opacity: 1;
   transition: transform 400ms cubic-bezier(0, 0.45, 0.15, 1), opacity 400ms cubic-bezier(0, 0.45, 0.15, 1);
@@ -389,9 +430,9 @@ section:nth-last-child(2) {
     line-height: 12vw;
   }
   h2 {
-    font-family: "Jost", sans-serif;
-    font-size: 8vw;
-    line-height: 12vw;
+    font-family: "Vesterbro", sans-serif;
+    font-size: 4vw;
+    line-height: 4vw;
     color: #18033c;
   }
   .intro-text {
@@ -433,10 +474,10 @@ section:nth-last-child(2) {
     line-height: 14vw;
   }
   h2 {
-    font-family: "Averta", sans-serif;
-    font-size: 13vw;
-    line-height: 13vw;
-    color: #18033c;
+    font-family: "Vesterbro", sans-serif;
+    font-size: 7vw;
+    line-height: 8vw;
+    color: #000;
   }
   .intro-text {
     font-size: 20px;
@@ -459,8 +500,20 @@ section:nth-last-child(2) {
 }
 .content-about {
   display: flex;
+  text-align: left;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 2%;
   min-height: 100vh;
+}
+
+.boxPicture {
+  display: flex;
+  align-items: flex-start;
+  min-height: 350px;
+  width: 100%;
 }
 
 /* work */

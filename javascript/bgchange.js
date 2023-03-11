@@ -6,8 +6,8 @@ const session3 = document.getElementById("session3");
 
 console.log(session1);
 // Defina as cores iniciais e finais
-const corInicial = "#420fe7";
-const corFinalSession1 = "#344cd4";
+const corInicial = "#ddd";
+const corFinalSession1 = "#f2f2f2";
 const corFinalSession2 = "#ffffff";
 
 // Defina as posições de rolagem que acionarão as mudanças de cor
