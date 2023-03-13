@@ -1,42 +1,52 @@
-// Obtenha as referências para o body e as sessões
+// Get references to the body and the sessions
 const body = document.body;
 const session1 = document.getElementById("session1");
 const session2 = document.getElementById("session2");
 const session3 = document.getElementById("session3");
+const footer = document.getElementById("footer");
 
 console.log(session1);
-// Defina as cores iniciais e finais
-const corInicial = "#ddd";
-const corFinalSession1 = "#f2f2f2";
-const corFinalSession2 = "#ffffff";
 
-// Defina as posições de rolagem que acionarão as mudanças de cor
-const posicaoRolagemSession1 = session1.offsetTop + session1.offsetHeight * 0.7;
-const posicaoRolagemSession2 = session2.offsetTop + session2.offsetHeight * 0.7;
-const posicaoRolagemSession3 = session3.offsetTop + session3.offsetHeight * 0.7;
+// Define the initial and final colors
+const initialColor = "#CEE0DC";
+const finalColorSession1 = "#B9CFD4";
+const finalColorSession2 = "#FFF";
+const finalColorFooter = "#f2c744";
 
-// Adicione um ouvinte de evento para o evento de rolagem na janela
+// Define the scroll positions that will trigger the color changes
+const scrollPositionSession1 = session1.offsetTop + session1.offsetHeight * 0.6;
+const scrollPositionSession2 = session2.offsetTop + session2.offsetHeight * 0.3;
+const scrollPositionSession3 = session3.offsetTop + session3.offsetHeight * 0.6;
+const scrollPositionFooter = footer.offsetTop;
+
+// Add an event listener for the scroll event on the window
 window.addEventListener("scroll", function () {
-  // Verifique se a posição de rolagem da sessão 3 foi alcançada ou ultrapassada
-  if (window.scrollY >= posicaoRolagemSession3) {
-    // Defina a cor do corpo para a cor final da sessão 2 com uma transição de 0,5 segundos
+  // Check if the scroll position of the footer has been reached or surpassed
+  if (window.scrollY >= scrollPositionFooter) {
+    // Set the body color to the final color of the footer with a 0.5 second transition
     body.style.transition = "background-color 0.5s ease";
-    body.style.backgroundColor = corFinalSession2;
+    body.style.backgroundColor = finalColorFooter;
   }
-  // Verifique se a posição de rolagem da sessão 2 foi alcançada ou ultrapassada
-  else if (window.scrollY >= posicaoRolagemSession2) {
-    // Defina a cor do corpo para a cor final da sessão 2 com uma transição de 0,5 segundos
+  // Check if the scroll position of session 3 has been reached or surpassed
+  else if (window.scrollY >= scrollPositionSession3) {
+    // Set the body color to the final color of session 2 with a 0.5 second transition
     body.style.transition = "background-color 0.5s ease";
-    body.style.backgroundColor = corFinalSession2;
+    body.style.backgroundColor = finalColorSession2;
   }
-  // Caso contrário, verifique se a posição de rolagem da sessão 1 foi alcançada ou ultrapassada
-  else if (window.scrollY >= posicaoRolagemSession1) {
-    // Defina a cor do corpo para a cor final da sessão 1 com uma transição de 0,5 segundos
+  // Check if the scroll position of session 2 has been reached or surpassed
+  else if (window.scrollY >= scrollPositionSession2) {
+    // Set the body color to the final color of session 2 with a 0.5 second transition
     body.style.transition = "background-color 0.5s ease";
-    body.style.backgroundColor = corFinalSession1;
+    body.style.backgroundColor = finalColorSession2;
+  }
+  // Otherwise, check if the scroll position of session 1 has been reached or surpassed
+  else if (window.scrollY >= scrollPositionSession1) {
+    // Set the body color to the final color of session 1 with a 0.5 second transition
+    body.style.transition = "background-color 0.5s ease";
+    body.style.backgroundColor = finalColorSession1;
   } else {
-    // Caso contrário, defina a cor do corpo para a cor inicial com uma transição de 0,5 segundos
+    // Otherwise, set the body color to the initial color with a 0.5 second transition
     body.style.transition = "background-color 0.5s ease";
-    body.style.backgroundColor = corInicial;
+    body.style.backgroundColor = initialColor;
   }
 });

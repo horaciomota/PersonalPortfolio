@@ -48,8 +48,10 @@ var morphing = anime({
 // Copy to Clipboard
 // Sources : https://alligator.io/js/copying-to-clipboard//
 
+const headerTxt = document.querySelector(".intro-content");
+const introHealine = headerTxt.querySelector(".text");
+
 const ctcMail = document.querySelectorAll(".contact");
-console.log(ctcMail);
 
 ctcMail.forEach((mail) => {
   mail.addEventListener("click", () => {
@@ -59,17 +61,48 @@ ctcMail.forEach((mail) => {
     selection.removeAllRanges();
     selection.addRange(range);
 
-    try {
-      document.execCommand("copy");
-      selection.removeAllRanges();
+    const originalText = introHealine.innerHTML;
+    const newText = "Ohhh! You're gonna send me an email? Can't wait!";
+    const typingDelay = 5; // delay in milliseconds between each character being typed
 
-      mail.getElementsByClassName("mail")[0].dataset.status = "Copied!";
-      mail.classList.add("success");
+    let i = 0;
 
-      setTimeout(() => {
-        mail.classList.remove("success");
-        mail.getElementsByClassName("mail")[0].dataset.status = "Click to Copy";
-      }, 1200);
-    } catch (e) {}
+    const typingInterval = setInterval(() => {
+      if (i < newText.length) {
+        introHealine.innerHTML =
+          originalText + "<strong>" + newText.substring(0, i + 1) + "</strong>";
+        i++;
+      } else {
+        clearInterval(typingInterval);
+        try {
+          document.execCommand("copy");
+          selection.removeAllRanges();
+
+          mail.getElementsByClassName("mail")[0].dataset.status = "Copied!";
+          mail.classList.add("success");
+
+          setTimeout(() => {
+            mail.classList.remove("success");
+            mail.getElementsByClassName("mail")[0].dataset.status =
+              "Click to Copy";
+            let j = 0;
+
+            const deletingInterval = setInterval(() => {
+              if (j < newText.length) {
+                introHealine.innerHTML =
+                  originalText +
+                  "<strong>" +
+                  newText.substring(0, newText.length - j - 1) +
+                  "</strong>";
+                j++;
+              } else {
+                clearInterval(deletingInterval);
+                introHealine.innerHTML = originalText;
+              }
+            }, typingDelay);
+          }, 1200);
+        } catch (e) {}
+      }
+    }, typingDelay);
   });
 });

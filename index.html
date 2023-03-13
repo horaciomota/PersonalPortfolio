@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
 
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/animation.css" />
     <link rel="stylesheet" href="style/navbar.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
     <link
       href="https://fonts.googleapis.com/css?family=Lato:300,600,700&amp;display=swap"
       rel="stylesheet"
@@ -161,40 +165,91 @@
           </div>
         </div>
       </div>
+      <div class="space col-lg-12"></div>
 
       <div class="content-about" id="session2">
-
         <div class="boxPicture col-lg-5">
-          <img src="assets/about-photo.jpg" alt="" class="img-fluid pr-2" />
-          <i class="bi bi-filetype-js">xxxx</i>
+          <img src="assets/about-photo.jpg" alt="" class="img-fluid" />
         </div>
-        <div class="txtAbout col-lg-6"><h2>About me</h2>
-          <p>     
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda perferendis corporis, officiis numquam, aut voluptas molestias adipisci omnis cumque, ex rerum at. Esse incidunt reprehenderit iure dolorem laborum velit voluptatum?<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur nihil repellat facilis distinctio placeat rem consequatur rerum porro sed, aliquam ad sunt iusto minus temporibus explicabo nostrum excepturi tenetur fugiat? lore
+        <div class="txtAbout col-lg-6">
+          <h2>About me</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+            perferendis corporis, officiis numquam, aut voluptas molestias
+            adipisci omnis cumque, ex rerum at. Esse incidunt reprehenderit iure
+            dolorem laborum velit voluptatum?<br /><br />Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Aspernatur nihil repellat facilis
+            distinctio placeat rem consequatur rerum porro sed, aliquam ad sunt
+            iusto minus temporibus explicabo nostrum excepturi tenetur fugiat?
+            lore
           </p>
-        
-          <div class="resume mail">
-            <h3><svg width="22" height="30" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 29.5h22V0H0v29.5zM19.5 27h-17V2.5h17V27z" fill="#18033C" fill-rule="nonzero"></path><path fill="#F3F2F4" d="M5.1 6.9h12.1v1.3H5.1zM5.1 10.7h12.1V12H5.1z"></path><path fill="#000" d="M5.1 14.6H7v1.3H5.1zM5.1 18.4H7v1.3H5.1zM5.1 22.2H7v1.3H5.1z"></path><path fill="#000" d="M8.8 14.6h8.3v1.3H8.8zM8.8 18.4h8.3v1.3H8.8zM8.8 22.2h8.3v1.3H8.8z"></path></g></svg>Past&nbsp;Experience</h3>
-            <p>Want to know more about my education and experience.</p> 
-            <a href="http://www.adriengervaix.com/files/adriengervaix_resume.pdf">My Resume</a>
-        </div>
-        
-        </div>
-        
-      </div>
 
+          <div class="resume mail">
+            <p>Want to know more about my education and experience.</p>
+            <br />
+            <a
+              href="http://www.adriengervaix.com/files/adriengervaix_resume.pdf"
+              >My Resume</a
+            >
+          </div>
+        </div>
+
+        <div class="listOfSkills col-lg-12 p-5">
+          <ul class="list-inline icon-list">
+            <li><i class="fab fa-html5 fa-3x"></i><br />HTML5</li>
+            <li><i class="fab fa-css3-alt fa-3x"></i><br />CSS3</li>
+            <li><i class="fab fa-js-square fa-3x"></i><br />JavaScript</li>
+            <li><i class="fab fa-react fa-3x"></i><br />React</li>
+            <li><i class="fab fa-bootstrap fa-3x"></i><br />Bootstrap</li>
+            <li><i class="fab fa-sass fa-3x"></i><br />Sass</li>
+            <li><i class="fab fa-git fa-3x"></i><br />Git</li>
+            <li><i class="fab fa-github fa-3x"></i><br />GitHub</li>
+          </ul>
+        </div>
       </div>
+      <div class="space col-lg-12"></div>
 
       <div class="content-work" id="session3">
         <div class="project1">
-          <div class="projectbrief col-lg-4">
-            <h2>The Ballet</h2>
-            <h3>Queensland Ballet</h3>
-            <p>
-              An elegant microsite showcasing the 2013 season productions of
-              Queensland Ballet within an interactive experience
-            </p>
+          <div class="graphic col-lg-8 d-flex">
+            <video
+              class="my-video img-fluid"
+              src="assets/Home_NikeOne.mp4"
+              muted
+              autoplay
+              loop
+            ></video>
+            <img
+              class="project_graphic img-fluid"
+              src="assets/NikeOne_Thumb.png"
+              alt=""
+            />
           </div>
+
+          <div class="projectbrief col-lg-4">
+            <h2>Nike One</h2>
+            <div class="objectve">
+              <strong>Objective</strong>
+              <p>
+                o create an online experience to promote the game itself but
+                first and foremost serve as an educational tool to educate users
+                on how to play and experience the game. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Officia nisi, est explicabo,
+                laboriosam a nesciunt ipsam obcaecati placeat, laborum
+                voluptatum enim dicta debitis quaerat sint consequatur assumenda
+                libero deleniti unde.
+              </p>
+            </div>
+            <div class="liveDemo mail">
+              <p>I know its boring just the pictures! Check it online.</p>
+              <a href="##">Live Demo</a>
+              <i class="fab fa-github fa-2x"></i>GitHub code
+            </div>
+          </div>
+        </div>
+        <div class="space col-lg-12"></div>
+
+        <div class="project1">
           <div class="graphic col-lg-8 d-flex">
             <video
               class="my-video img-fluid"
@@ -209,8 +264,29 @@
               alt=""
             />
           </div>
-          <div class="space col-lg-12"></div>
+
+          <div class="projectbrief col-lg-4">
+            <h2>Ballet</h2>
+            <div class="objectve">
+              <strong>Objective</strong>
+              <p>
+                o create an online experience to promote the game itself but
+                first and foremost serve as an educational tool to educate users
+                on how to play and experience the game. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Officia nisi, est explicabo,
+                laboriosam a nesciunt ipsam obcaecati placeat, laborum
+                voluptatum enim dicta debitis quaerat sint consequatur assumenda
+                libero deleniti unde.
+              </p>
+            </div>
+            <div class="liveDemo mail">
+              <p>I know its boring just the pictures! Check it online.</p>
+              <a href="##">Live Demo</a>
+              <i class="fab fa-github fa-2x"></i>GitHub code
+            </div>
+          </div>
         </div>
+        <div class="space col-lg-12"></div>
 
         <div class="project1">
           <div class="graphic col-lg-8 d-flex">
@@ -230,58 +306,56 @@
 
           <div class="projectbrief col-lg-4">
             <h2>Clash Royale</h2>
-            <div class="objectve col-lg-12">
-              <h3>Objective</h3>
+            <div class="objectve">
+              <strong>Objective</strong>
               <p>
                 o create an online experience to promote the game itself but
                 first and foremost serve as an educational tool to educate users
-                on how to play and experience the game.
+                on how to play and experience the game. Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Officia nisi, est explicabo,
+                laboriosam a nesciunt ipsam obcaecati placeat, laborum
+                voluptatum enim dicta debitis quaerat sint consequatur assumenda
+                libero deleniti unde.
               </p>
             </div>
-            <div class="year col-lg-6">
-              <h3>Year</h3>
-              <p>2022</p>
-            </div>
-            <div class="tecno col-lg-6">
-              <h3>Technology:</h3>
-              <p>HTML, CSS, JAVASCRIPT</p>
+            <div class="liveDemo mail">
+              <p>I know its boring just the pictures! Check it online.</p>
+              <a href="##">Live Demo</a>
+              <i class="fab fa-github fa-2x"></i>GitHub code
             </div>
           </div>
-          <div class="space col-lg-12"></div>
         </div>
-
-        <div class="project1">
-          <div class="graphic col-lg-8 d-flex">
-            <video
-              class="my-video img-fluid"
-              src="assets/Home_NikeOne.mp4"
-              muted
-              autoplay
-              loop
-            ></video>
-            <img
-              class="project_graphic img-fluid"
-              src="assets/NikeOne_Thumb.png"
-              alt=""
-            />
-          </div>
-
-          <div class="projectbrief col-lg-4">
-            <h2>Nike One</h2>
-            <h3>A perfect Ecommerce app</h3>
-            <p>
-              A website educating users on how to play the game as well as
-              showing off all the amazing artwork, arenas and the characters.
-            </p>
-          </div>
-          <div class="space col-lg-12"></div>
-        </div>
+        <div class="space col-lg-12"></div>
       </div>
+
+      <footer class="footerCTA" id="footer">
+        <h1>Let’s work together</h1>
+
+        <div class="contact col-lg-6">
+          <div class="icon">
+            <svg width="16" height="11" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M.254 10.188H15.12V.438H.254v9.75zm2.403-8.635h10.075L7.72 4.923l-5.062-3.37zm-1.287.484l6.352 4.228 6.283-4.222v7.03H1.37V2.037z"
+                fill="#000"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <span class="mail" data-status="Click to Copy!"
+            >contact@horaciomota.com</span
+          >
+        </div>
+      </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script src="javascript/scripts.js"></script>
     <script src="javascript/bgchange.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

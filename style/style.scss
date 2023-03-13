@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap");
+$text-color: #2e2e2e;
+$yellow-CTA: #ffff00;
 
 @font-face {
   font-family: "Vesterbro";
@@ -19,19 +20,9 @@ body {
   box-sizing: border-box;
 }
 
-.content-about .about-services .resume h3 {
-  display: flex;
-  align-items: center;
-  color: #000;
-}
-
-.resume h3 svg {
-  margin-right: 14px;
-}
-
 .resume a {
   background-color: #f2c744;
-  color: #000;
+  color: $text-color;
   border: 1px solid #ddd;
   width: 100%;
   height: 70px;
@@ -44,13 +35,13 @@ body {
 
 .resume a:hover {
   background-color: #ffff00;
-  color: #000;
+  color: $text-color;
   border: 1px solid #f2c744;
 }
 
 .content .intro {
   width: 100%;
-  min-height: 60vh;
+  min-height: 90vh;
   padding: 0 40px 0 170px;
   box-sizing: border-box;
 }
@@ -61,10 +52,10 @@ body {
 }
 .content .intro .tag svg {
   margin: 0 30px;
-  fill: #000;
+  fill: $text-color;
 }
 .content .intro h1 {
-  margin-top: 40px;
+  margin-top: 80px;
   width: 100%;
   z-index: 30;
   position: relative;
@@ -124,7 +115,7 @@ body {
 }
 .content .intro .intro-content .text {
   animation: anim-text 1100ms cubic-bezier(0, 0.45, 0.15, 1);
-  color: #000;
+  color: $text-color;
   margin: 40px 0;
 }
 .content .intro .intro-content .contact {
@@ -168,6 +159,7 @@ body {
 }
 @media (max-width: 834px) {
   .content .intro {
+    min-height: 70vh;
     padding: 0 30px 0 30px;
   }
   .content .intro h1 sub {
@@ -211,7 +203,7 @@ body {
 }
 h1 {
   font-family: "Vesterbro", sans-serif;
-  color: #000;
+  color: $text-color;
   font-size: 7vw;
   line-height: 9vw;
 }
@@ -220,41 +212,39 @@ h2 {
   font-size: 2vw;
   font-weight: 700;
   line-height: 4vw;
-  color: #000;
+  color: $text-color;
 }
 h3 {
-  font-family: "Jost", sans-serif;
-  font-size: 24px;
-  line-height: 42px;
+  font-family: "Vesterbro", sans-serif;
+  font-size: 3vw;
+  font-weight: 700;
+  line-height: 4vw;
+  color: $text-color;
 }
-h3 {
-  margin: 32px 0;
+
+h4 {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 2vw;
+  color: $text-color;
 }
-.outline-title {
-  font-family: "Jost", sans-serif;
-  font-size: 9vw;
-  line-height: 9.4vw;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px #cecae3;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+
 .intro-title {
-  font-family: "Jost", sans-serif;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 48px;
-  color: #f3f2f4;
+  color: $text-color;
 }
 .intro-text {
   color: #f3f2f4;
-  font-family: "Jost", sans-serif;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   font-size: 28px;
   line-height: 36px;
   display: block;
 }
 .title-section .title {
-  color: #18033c;
-  font-family: "Jost", sans-serif;
+  color: $text-color;
+  font-family: Lato, Helvetica, Arial, sans-serif;
 }
 .txtMark {
   background-color: #ffff00;
@@ -266,8 +256,8 @@ p {
   line-height: 1.65;
 }
 a {
-  font-family: "Jost", sans-serif;
-  color: #f3f2f4;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  color: $text-color;
   font-size: 16px;
 }
 a:hover {
@@ -276,7 +266,7 @@ a:hover {
 
 button {
   height: 60px;
-  font-family: "Jost", sans-serif;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   border: 1px solid #574cf2;
   background-color: #420fe7;
   color: #f3f2f4;
@@ -285,19 +275,19 @@ button {
   transition: 200ms background-color;
 }
 button:hover {
-  background-color: #eea1be;
+  background-color: $text-color;
   cursor: pointer;
 }
 .tag {
   font-family: Lato, Helvetica, Arial, sans-serif;
-  color: #000;
+  color: $text-color;
   font-size: 16px;
 }
 section:nth-last-child(2) {
   margin-bottom: 0;
 }
 .contact {
-  border: 1px solid #000;
+  border: 1px solid $text-color;
   display: flex;
   position: relative;
   align-items: center;
@@ -325,13 +315,13 @@ section:nth-last-child(2) {
   margin-right: 40px;
   display: flex;
   box-sizing: border-box;
-  border-right: 1px solid rgba(243, 242, 244, 0.3);
+  border-right: 1px solid $text-color;
   justify-content: center;
   align-items: center;
 }
 .contact .mail {
   font-family: Lato, Helvetica, Arial, sans-serif;
-  color: #000;
+  color: $text-color;
   font-size: 1.4vw;
   font-weight: 600;
   transform: scale(1);
@@ -345,8 +335,8 @@ section:nth-last-child(2) {
   font-size: 16px;
   position: absolute;
   top: calc(50% - 8px);
-  color: #18033c;
-  font-family: "Jost", sans-serif;
+  color: $text-color;
+  font-family: Lato, Helvetica, Arial, sans-serif;
   justify-content: center;
   opacity: 0;
   transition: opacity 400ms;
@@ -400,6 +390,7 @@ section:nth-last-child(2) {
     line-height: 4vw;
     color: #18033c;
   }
+
   .intro-text {
     font-size: 20px;
     line-height: 32px;
@@ -442,7 +433,8 @@ section:nth-last-child(2) {
     font-family: "Vesterbro", sans-serif;
     font-size: 7vw;
     line-height: 8vw;
-    color: #000;
+    color: $text-color;
+    margin-top: 5%;
   }
   .intro-text {
     font-size: 20px;
@@ -466,20 +458,47 @@ section:nth-last-child(2) {
 
 .content-about {
   display: flex;
-  text-align: left;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 0;
-  padding: 2%;
-  min-height: 100vh;
+  justify-content: center;
+  min-height: 80vh;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 834px) {
+  .content-about {
+    min-height: 80vh;
+    padding: 4%;
+  }
+
+  .listOfSkills {
+    display: none;
+  }
 }
 
 .boxPicture {
   display: flex;
   align-items: flex-start;
-  min-height: 350px;
+  min-height: 300px;
   width: 100%;
+}
+
+.list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .list-inline {
+    display: none;
+  }
+  .list-inline li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 /* work */
@@ -488,6 +507,10 @@ section:nth-last-child(2) {
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .project1 {
@@ -500,28 +523,53 @@ section:nth-last-child(2) {
 .projectbrief {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
   gap: 0;
 }
 
 .graphic {
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 .my-video {
   max-height: 610px;
-  object-fit: contain;
+  object-fit: cover;
+}
+.liveDemo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.liveDemo a {
+  background-color: #f2c744;
+  color: $text-color;
+  border: 1px solid #ddd;
+  width: 50%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  transition: background-color 200ms, border 200ms;
+  border-radius: 4px;
+}
+
+.liveDemo a:hover {
+  background-color: #ffff00;
+  color: $text-color;
+  border: 1px solid #f2c744;
 }
 
 .space {
-  margin: 10% 0 1%;
-  border-bottom: solid 1px #cccc;
+  margin: 0% 0 5%;
+  border-bottom: solid 1px #aaa;
 }
 
 @media screen and (max-width: 768px) {
   .my-video {
-    width: 360px;
+    min-width: 360px;
     padding-left: 0px;
     margin: 0 auto;
     display: block;
@@ -534,7 +582,7 @@ section:nth-last-child(2) {
   position: absolute;
   left: 0;
   bottom: -2vw;
-  transform: translateX(-18%);
+  transform: translateX(-28%);
   max-height: 78%;
 }
 
@@ -542,4 +590,15 @@ section:nth-last-child(2) {
   .project_graphic {
     display: none;
   }
+}
+
+//Footer
+.footerCTA {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: center;
+  min-height: 40vh;
+  gap: 0;
+  text-align: center;
 }
